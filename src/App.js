@@ -8,6 +8,11 @@ import { toast } from 'react-toastify';
 
 const API_BASE = process.env.API_BASE || '/api';
 
+console.log(API_BASE);
+console.log(process.env.API_BASE);
+
+
+
 const Github = ()=>{
   return (
     <a

@@ -55,8 +55,8 @@ const MusicSearch = () => {
 
 
   const sources = [
-    'netease', 'tencent', 'tidal', 'spotify', 
-    'ytmusic', 'qobuz', 'joox', 'deezer',
+    'netease','joox','tencent', 'tidal', 'spotify', 
+    'ytmusic', 'qobuz',  'deezer',
     'migu', 'kugou', 'kuwo', 'ximalaya'
   ];
 
@@ -299,7 +299,12 @@ useEffect(() => {
 
 
   return (
-     <Container className="my-4">
+     <Container className="my-4"
+     style={{ 
+      paddingBottom: lyricExpanded ? '320px' : '120px',
+      transition: 'padding 0.3s ease'
+    }}
+     >
       <Github/>
       <h1 className="text-center mb-4">全平台音乐搜索</h1>
       
@@ -411,7 +416,13 @@ useEffect(() => {
         ))}
       </Row>
 
-      <div className="fixed-bottom bg-light p-3 border-top">
+      <div className="fixed-bottom bg-light p-3 border-top"
+      style={{
+        height: lyricExpanded ? '300px' : 'auto',
+        boxShadow: '0 -2px 10px rgba(0,0,0,0.1)',
+        zIndex: 1000
+      }}
+      >
         <Row className="align-items-center">
           <Col md={3}>
           <div className="d-flex ">

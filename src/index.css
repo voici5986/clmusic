@@ -134,3 +134,25 @@ code {
     size: 28px;
   }
 }
+
+
+.main-content {
+  min-height: calc(100vh - 120px); 
+}
+
+
+@media (max-width: 768px) {
+  .main-content {
+    min-height: calc(100vh - 80px);
+    padding-bottom: 80px !important;
+  }
+  
+  .fixed-bottom {
+    height: auto !important;
+    padding: 10px;
+  }
+}
+
+.search-result-card {
+  margin-bottom: 20px;
+}

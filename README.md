@@ -43,14 +43,14 @@
   - docker 
 
      ```shell
-     docker run -d -p 80:80 --restart always ghcr.io/lovebai/lc-music
+     docker run -d -p 80:80 --restart always ghcr.io/lovebai/cl-music:0.1.1
      ```
   - docker-compose
 
 ```yaml
 services:
     lovebai:
-        image: ghcr.io/lovebai/lc-music
+        image: ghcr.io/lovebai/cl-music:0.1.1
         restart: always
         ports:
             - '80:80'

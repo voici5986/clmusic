@@ -2,6 +2,7 @@ FROM node:22-slim AS base
 
 ENV NPM_HOME="/npm"
 ENV PATH="$NPM_HOME:$PATH"
+ENV REACT_APP_API_BASE="https://music-api.ucds.me/api"
 RUN corepack enable
 COPY . /app
 WORKDIR /app

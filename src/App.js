@@ -6,7 +6,7 @@ import { FaPlay, FaPause, FaDownload, FaMusic ,FaChevronDown,FaChevronUp,FaGithu
 import { toast } from 'react-toastify';
 
 
-const API_BASE = '/api';
+const API_BASE = process.env.API_BASE || '/api';
 
 const Github = ()=>{
   return (

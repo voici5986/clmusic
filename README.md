@@ -43,7 +43,7 @@
   - docker 
 
      ```shell
-     docker run -d -p 80:80 -e REACT_APP_API_BASE=https://music-api.ucds.me/api --restart always ghcr.io/lovebai/lc-music
+     docker run -d -p 80:80 --restart always ghcr.io/lovebai/lc-music
      ```
   - docker-compose
 
@@ -52,8 +52,6 @@ services:
     lovebai:
         image: ghcr.io/lovebai/lc-music
         restart: always
-        environment:
-            - REACT_APP_API_BASE=https://music-api.ucds.me/api
         ports:
             - '80:80'
 ```

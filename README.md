@@ -1,6 +1,8 @@
 # CL-Music 全平台音乐搜索
 
 一款基于React开发的在线音乐搜索和播放应用。
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a55b97dc-1ba1-4859-994a-db396b196aa7/deploy-status)](https://app.netlify.com/sites/cl-music/deploys)  [![Vercel Status](https://img.shields.io/badge/vercel-success-{{color}})](https://vercel.com)
+
 
 ![1744334065693](image/README/1744334065693.png)
 
@@ -32,6 +34,28 @@
   - 音质选择(最高支持999k)
   - 歌词显示(支持双语歌词)
   - 专辑封面显示
+
+## 项目部署
+ 生产环境需配置一个环境编辑，`REACT_APP_API_BASE` 后端API地址，由于跨域问题不可以直接使用，一般填写反代 `https://music-api.gdstudio.xyz/api.php` 后地址，可使用nginx caddy 等web服务反代，也可是cloudflare worker反代，我这边提供了worker反向代理的代码，见 [worker.js](worker.js)
+    - 可快速部署到 netlify 、vercel、Cloudflare Pages 等平台。[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=thttps%3a%2f%2fgithub.com%2flovebai%2fcl-music&project-name=cl-music&repository-name=cl-music)  [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/lovebai/cl-music)
+
+    - Docker部署 
+      - docker 
+        ```shell
+        docker run -d -p 80:80 -e REACT_APP_API_BASE=https://music-api.ucds.me/api --restart always ghcr.io/lovebai/lc-music
+        ```
+      - docker-compose
+
+        ```yaml
+services:
+    lovebai:
+        image: ghcr.io/lovebai/lc-music
+        restart: always
+        environment:
+            - 'REACT_APP_API_BASE=https://music-api.ucds.me/api'
+        ports:
+            - '80:80'
+        ```
 
 ## 技术栈
 

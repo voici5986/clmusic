@@ -1,6 +1,6 @@
 FROM node:22-slim AS base
 
-ENV PNPM_HOME="/npm"
+ENV NPM_HOME="/npm"
 ENV PATH="$NPM_HOME:$PATH"
 RUN corepack enable
 COPY . /app

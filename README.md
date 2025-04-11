@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# CL-Music 全平台音乐搜索
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+一款基于React开发的在线音乐搜索和播放应用。
 
-## Available Scripts
+![1744334065693](image/README/1744334065693.png)
 
-In the project directory, you can run:
+![1744334075944](image/README/1744334075944.png)
 
-### `npm start`
+![1744334087360](image/README/1744334087360.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 功能特点
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 🎵 支持多平台音乐搜索
 
-### `npm test`
+  - 网易云音乐
+  - QQ音乐
+  - TIDAL
+  - Spotify
+  - YouTube Music
+  - Qobuz
+  - JOOX
+  - Deezer
+  - 咪咕音乐
+  - 酷狗音乐
+  - 酷我音乐
+  - 喜马拉雅
+- 🎨 主要功能
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  - 音乐搜索
+  - 在线播放
+  - 音乐下载
+  - 音质选择(最高支持999k)
+  - 歌词显示(支持双语歌词)
+  - 专辑封面显示
 
-### `npm run build`
+## 技术栈
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React
+- React Bootstrap
+- Axios
+- React Player
+- React Icons
+- React Toastify
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 本地开发
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. 克隆项目
 
-### `npm run eject`
+```bash
+git clone https://github.com/lovebai/cl-music.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. 安装依赖
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+cd cl-music
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. 启动开发服务器
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm start
+```
 
-## Learn More
+4. 打开浏览器访问 `http://localhost:3000`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 构建部署
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+构建生产版本：
 
-### Code Splitting
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 项目结构
 
-### Analyzing the Bundle Size
+```
+cl-music/
+    ├── public/              # 静态文件
+    ├── src/                 # 源代码
+    │   ├── App.js          # 主应用组件
+    │   ├── index.js        # 入口文件
+    │   └── setupProxy.js   # 开发代理配置
+    └── package.json        # 项目配置文件
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## API接口
 
-### Making a Progressive Web App
+项目使用的是第三方音乐API接口，通过setupProxy.js配置代理访问。
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+后端API接口：`https://music-api.gdstudio.xyz/api.php`
 
-### Advanced Configuration
+## 许可证
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT License
